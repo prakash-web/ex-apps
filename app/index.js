@@ -12,7 +12,7 @@ var HelloWorld = React.createClass({
 });
 var ProfilePic = React.createClass({
 	render: function() {
-		return <img src="{this.props.img}" />
+		return <img src={this.props.img} style={{height:'250',width:'250'}}/>
 	}
 });
 var Link = React.createClass({
@@ -55,8 +55,11 @@ var Profile= React.createClass({
 		)
 	}
 });
-
 ReactDOM.render(
 	routes,
+	document.getElementById('head')
+);
+ReactDOM.render(
+	<Profile/>,
 	document.getElementById('app')
 );
